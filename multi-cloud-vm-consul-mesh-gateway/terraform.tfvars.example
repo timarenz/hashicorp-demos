@@ -1,0 +1,10 @@
+# This will be used to identify resources using labels and sometimes resource names
+environment_name = "my-mesh-gateway"
+# This will tag all machines with an owner name.
+owner_name = "me"
+# GCP project in which the resources should be set up
+gcp_project = "my-project"
+# Public key to put as authorized keys in the VMs
+ssh_public_key_file = "/Users/tim/.ssh/id_rsa.pub"
+# Private key used to ssh into to the VMs for provisioning tasks.
+ssh_private_key_file = "/Users/tim/.ssh/id_rsa"
