@@ -23,3 +23,22 @@ sudo consul reload
 
 sudo docker run -d --network host --name counting-proxy timarenz/envoy-consul:v1.11.1_1.6.1 -sidecar-for counting -- -l debug
 #consul connect proxy -sidecar-for counting -log-level debug
+
+consul config write -<<EOF
+{
+  "kind": "service-defaults",
+  "name": "counting",
+  "protocol": "http"
+}
+EOF
+
+consul config write -<<EOF
+kind            = "service-resolver"
+name            = "counting"
+connect_timeout = "15s"
+failover = {
+  "*" = {
+    datacenters = ["dc-aws", "dc-gcp"]
+  }
+}
+EOF
