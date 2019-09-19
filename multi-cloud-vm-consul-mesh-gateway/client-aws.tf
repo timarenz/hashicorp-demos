@@ -116,7 +116,7 @@ resource "null_resource" "aws_consul_client_1_meshify" {
 
   provisioner "remote-exec" {
     inline = [<<EOF
-sudo docker run -d --network host --name gateway-aws timarenz/consul-envoy:1.6.0-beta3_1.10.0 -mesh-gateway -register \
+sudo docker run -d --network host --name gateway-aws timarenz/envoy-consul:v1.11.1_1.6.1 -mesh-gateway -register \
   -service "gateway-aws" \
   -bind-address bind=${module.aws_consul_client_1.private_ip}:8443 \
   -address ${module.aws_consul_client_1.private_ip}:8443 \
