@@ -25,11 +25,9 @@ sudo docker run -d --network host --name counting-proxy timarenz/envoy-consul:v1
 #consul connect proxy -sidecar-for counting -log-level debug
 
 consul config write -<<EOF
-{
-  "kind": "service-defaults",
-  "name": "counting",
-  "protocol": "http"
-}
+kind = "service-defaults"
+name = "counting"
+protocol = "http"
 EOF
 
 consul config write -<<EOF
