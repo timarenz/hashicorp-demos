@@ -30,5 +30,5 @@ sudo tee /etc/consul.d/dashboard-service.json <<EOF
 EOF
 sudo consul reload
 
-sudo docker run -d --network host --name dashboard-proxy timarenz/consul-envoy:1.6.0-beta3_1.10.0 -sidecar-for dashboard -- -l debug
+sudo docker run -d --network host --name dashboard-proxy timarenz/envoy-consul:v1.11.1_1.6.1 -sidecar-for dashboard -- -l debug
 #consul connect proxy -sidecar-for dashboard -log-level debug

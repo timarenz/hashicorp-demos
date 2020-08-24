@@ -10,7 +10,7 @@ locals {
   gcp_username        = "ubuntu"
   ssh_public_key      = file(var.ssh_public_key_file)
   ssh_private_key     = file(var.ssh_private_key_file)
-  consul_version      = "1.6.0-beta3"
+  consul_version      = "1.6.1"
   aws_consul_dc_name  = "dc-aws"
   gcp_consul_dc_name  = "dc-gcp"
   aws_discovery_tag   = "consul"
