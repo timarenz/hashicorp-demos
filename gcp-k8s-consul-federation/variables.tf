@@ -1,23 +1,11 @@
-variable "gcp_credentials_file" {
-  default = "../../creds/terraform-tim-arenz-0ca4ad9bf9ed.json"
-}
+variable "gcp_credentials_file" {}
 
-variable "gcp_project" {
-  default = "tim-arenz"
-}
+variable "gcp_project" {}
 
-variable "gcp_region" {
-  default = "europe-west4"
-}
+variable "gcp_region" {}
 
-variable "environment_name" {
-  default = "consul-k8s-federation"
-}
+variable "environment_name" {}
 
-variable "owner_name" {
-  default = "tar"
-}
+variable "owner_name" {}
 
-variable "consul_license_file" {
-  default = "../../creds/consul.license"
-}
+variable "consul_license_file" {}

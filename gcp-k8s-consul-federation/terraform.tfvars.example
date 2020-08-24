@@ -1,0 +1,6 @@
+gcp_credentials_file = "google.json"
+gcp_project = "tim-arenz"
+gcp_region = "europe-west4"
+environment_name = "consul-k8s-federation"
+owner_name = "tar"
+consul_license_file = "consul.license"
